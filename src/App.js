@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// import Banner from "./components.jsx/Banner";
+// import About from "./components.jsx/About";
+import Sort from "./components.jsx/Sort";
+import Categories from "./components.jsx/Categories";
+import Mainbody from "./components.jsx/Mainbody";
+ import { ProductsProvider } from "./components.jsx/Context/ProductContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+     <ProductsProvider>
+     {/* <Banner/>
+    <About/> */}
+    <Sort/> 
+ 
+    <div className="flex justify-between">
+     <Categories />
+      <Mainbody/>
     </div>
+  </ProductsProvider>
+    </>
   );
 }
 
